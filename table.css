@@ -6,3 +6,35 @@ table#killer td
 table#killer{
     border-collapse: collapse;
 }
+
+/* Simple footer styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0 16px 80px 16px; /* bottom padding so fixed/absolute footers don't overlap */
+    background: #0b0b0b; /* subtle dark background to fit the theme */
+    color: #e6e6e6;
+}
+
+footer {
+    text-align: center;
+    padding: 14px 10px;
+    position: relative; /* keeps it in the flow but allows easy switch to fixed */
+    width: 100%;
+    max-width: 1200px;
+    margin: 24px auto 0 auto;
+    color: #cfcfcf;
+    background: rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    font-size: 14px;
+}
+
+/* Optional small utility to make images fit */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 8px 0;
+}
