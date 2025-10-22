@@ -1,10 +1,145 @@
-table#killer th , 
-table#killer td
-{
-    border: 2px solid red;
+/* Reset và base styles */
+:root {
+    --primary-color: #ff4655;
+    --bg-color: #0f1923;
+    --text-color: #ece8e1;
+    --table-border: #ff4655;
+    --header-bg: #1f2731;
 }
-table#killer{
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header styles */
+h1 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Link styles */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 12px 24px;
+    background-color: red;
+    border-radius: 5px;
+    color: #cfcfcf;
+}
+
+a:hover {
+    color: black;
+    text-decoration: wavy;
+    transform: translateY(-2px);
+}
+
+/* Pre tag styles */
+pre {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    margin: 2rem 0;
+    white-space: pre-wrap;
+}
+
+/* Table styles - common */
+table {
+    width: 100%;
+    margin: 2rem 0;
     border-collapse: collapse;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+    background-color: var(--header-bg);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+td {
+    transition: background-color 0.3s ease;
+}
+
+tr:hover td {
+    background-color: rgba(255,70,85,0.1);
+}
+
+/* Specific table styles */
+table#killer th, 
+table#killer td {
+    border: 1px solid var(--table-border);
+}
+
+table#survivor {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 3rem;
+    background: var(--header-bg);
+    border-radius: 8px;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+
+footer::before {
+    content: '© 2025 ';
+    opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
 }
 
 /* Simple footer styling */
